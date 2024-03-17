@@ -9,7 +9,7 @@ IBM DataStage
 ### Collaboration and Sharing
 Slack, Microsoft Teams
 ### Data Science
-Python
+Python (NumPy, Pandas, SciPy, statsmodels)
 ### Process Integration
 IBM Rational Team Concert
 ## Others
