@@ -110,12 +110,12 @@ input, select, textarea {
 		-webkit-transition: color .2s ease-in-out;
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
-		color: #dd7a61;
+		color: #525ceb;
 		text-decoration: underline;
 	}
 
 		a:hover {
-			color: #dd7a61 !important;
+			color: #525ceb !important;
 		}
 
 		a img {
@@ -1697,7 +1697,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #dd7a61;
+			background-color: #525ceb;
 			color: #fff !important;
 		}
 
@@ -1807,7 +1807,7 @@ input, select, textarea {
 					background-color: rgb(255, 255, 255);
 					border-radius: 6px;
 					box-shadow: inset 0px 0px 0px 1px #ffffff, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
-					color: #070d69 !important;
+					color: #B5C0D0 !important;
 					display: block;
 					font-size: 26px;
 					height: 48px;
@@ -1820,15 +1820,15 @@ input, select, textarea {
 				}
 
 				ul.social li a.fa-linkedin-in {
-					background-color: #dd7a61;
+					background-color: #525ceb;
 				}
 
 				ul.social li a.fa-skype {
-					background-color: #dd7a61;
+					background-color: #525ceb;
 				}
 
 				ul.social li a.fa-envelope {
-					background-color: #dd7a61;
+					background-color: #525ceb;
 				}
 					ul.social li a:hover:before {
 						background-color: transparent;
@@ -1952,7 +1952,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style4 {
-			background-color: #070d69;
+			background-color: #B5C0D0;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
 		}
@@ -1979,7 +1979,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		background-color: #070d69;
+		background-color: #B5C0D0;
 		text-align: center;
 		position: fixed;
 		left: 0;
@@ -2022,11 +2022,11 @@ input, select, textarea {
 
 			#nav a:hover {
 				color: #fff !important;
-				background: #dd7a61;
+				background: #525ceb;
 			}
 
 			#nav a.active {
-				background: #dd7a61;
+				background: #525ceb;
 			}
 
 				#nav a.active:before {
