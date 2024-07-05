@@ -1,38 +1,41 @@
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Project</title>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="images/icon.png" rel="icon">
+		<!--content protection-->
+		<SCRIPT LANGUAGE=javascript>
+			function click(){alert('Copying is not allowed')}
+			function click1(){if(event.button==2){alert('Copying is not allowed')}}
+			function CtrlKeyDown(){if (event.ctrlKey){alert('Copying is not allowed')}}
+			document.onkeydown=CtrlKeyDown;
+			document.onselectstart=click;
+			document.onmousedown=click1;
+		</SCRIPT>
 	</head>
-	<!--content protection-->
-	<SCRIPT LANGUAGE=javascript>
-		function click(){alert('copy forbidden')}
-		function click1(){if(event.button==2){alert('copy forbidden')}}
-		function CtrlKeyDown(){if (event.ctrlKey){alert('copy forbidden')}}
-		document.onkeydown=CtrlKeyDown;
-		document.onselectstart=click;
-		document.onmousedown=click1;
-	</SCRIPT>
 	<body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
 	οncοpy='document.selection.empty()' οnselect='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()'>
-		<noscript><iframe src="p1.html"></iframe></noscript>
-		<div style="width: 900px; height: 500px;margin: 0 auto;">
-			<span>
-	<!--content-->
-
-	<h1>Biochemical cycles simulation</h1>
-
-<p>Tools: Stella Architect, MS Office, etc.</p>
-<img src="img/7/1.jpg" alt="" width="800"/>
-<img src="img/7/2.jpg" alt="" width="800"/>
-<img src="img/7/3.jpg" alt="" width="800"/>
-
-<br><p>&copy; Copyright <b>Yaoxi Yin</b> All Rights Reserved</p>
-</span>
-</body>
+	<noscript><iframe src="p7.html"></iframe></noscript>
+		<article id="work" class="wrapper style2">
+			<div class="article-container">
+				<!--content-->
+				<h1>Biochemical cycles simulation</h1>
+				<div class="justify-text">
+				<p>Tools: Stella Architect, MS Office, etc.</p>
+				<img src="img/7/1.jpg" alt="" width="800"/>
+				<img src="img/7/2.jpg" alt="" width="800"/>
+				<img src="img/7/3.jpg" alt="" width="800"/>
+				</div>
+					<div class="container medium">
+						<footer>
+							<ul id="copyright">
+							<li>&copy; Yaoxi Yin All rights reserved.</li>
+							</ul>
+						</footer>
+					</div>
+			</div>
+		</article>
+	</body>
 </html>

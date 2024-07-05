@@ -1,81 +1,83 @@
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Project</title>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="images/icon.png" rel="icon">
+		<!--content protection-->
+		<SCRIPT LANGUAGE=javascript>
+			function click(){alert('Copying is not allowed')}
+			function click1(){if(event.button==2){alert('Copying is not allowed')}}
+			function CtrlKeyDown(){if (event.ctrlKey){alert('Copying is not allowed')}}
+			document.onkeydown=CtrlKeyDown;
+			document.onselectstart=click;
+			document.onmousedown=click1;
+		</SCRIPT>
 	</head>
-	<!--content protection-->
-	<SCRIPT LANGUAGE=javascript>
-		function click(){alert('copy forbidden')}
-		function click1(){if(event.button==2){alert('copy forbidden')}}
-		function CtrlKeyDown(){if (event.ctrlKey){alert('copy forbidden')}}
-		document.onkeydown=CtrlKeyDown;
-		document.onselectstart=click;
-		document.onmousedown=click1;
-	</SCRIPT>
 	<body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
 	οncοpy='document.selection.empty()' οnselect='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()'>
-		<noscript><iframe src="p1.html"></iframe></noscript>
-	
-	<!--content-->
-		<div style="width: 900px; height: 500px;margin: 0 auto;">
-			<span>		
-<h1>Accenture Data Analytics Virtual Experience</h1>
+		<noscript><iframe src="p5.html"></iframe></noscript>
+		<article id="work" class="wrapper style2">
+				<div class="article-container">
+					<!--content-->
+					<h1>Accenture Data Analytics Virtual Experience</h1>
+					<div class="justify-text">
+					<p><a href="https://insidesherpa.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture_qAf6h7Yxgr98kdGG7_1641691434375_completion_certificate.pdf">Certificate of completion</a></p>
 
-<p><a href="https://insidesherpa.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture_qAf6h7Yxgr98kdGG7_1641691434375_completion_certificate.pdf">Certificate of completion</a></p>
+					<h2>1. Project understanding</h2>
 
-<h2>1. Project understanding</h2>
+					<p>Client: Social Buzz<br/>Client industry Social media &amp; contet creation<br/>- Which statement best describes the business problem that Accenture is tasked to address for this project?<br/>The client has reached a massive scale within recent years and does not have the resources internally to handle it.</p>
 
-<p>Client: Social Buzz<br/>Client industry Social media &amp; contet creation<br/>- Which statement best describes the business problem that Accenture is tasked to address for this project?<br/>The client has reached a massive scale within recent years and does not have the resources internally to handle it.</p>
+					<ul><li><p>Which statement lists the three requirements that Accenture is tasked to fulfill for this project?<br/>Audit of big data practice, recommendations for IPO, analysis of popular content.</p></li><li><p>Which task out of these options is the most relevant to you as a data analyst, and therefore which one will you work on?<br/>Analysis of sample data sets with visualizations.</p></li></ul>
 
-<ul><li><p>Which statement lists the three requirements that Accenture is tasked to fulfill for this project?<br/>Audit of big data practice, recommendations for IPO, analysis of popular content.</p></li><li><p>Which task out of these options is the most relevant to you as a data analyst, and therefore which one will you work on?<br/>Analysis of sample data sets with visualizations.</p></li></ul>
+					<h2>2. Data cleaning &amp; modeling</h2>
 
-<h2>2. Data cleaning &amp; modeling</h2>
+					<h3>Requirements gathering</h3>
 
-<h3>Requirements gathering</h3>
+					<p>7 available CSV files<br/>Main task: Analyze content categories that highlights the top5 categories with the largest aggregate popularity.<br/>4 selected CSV files: Content, Profile, Reactions, ReactionType.<br/><img alt="image" src="https://user-images.githubusercontent.com/83184113/147890324-fa748bb3-ec5c-4727-a7b7-0de638b5cd0f.png"/>  </p>
 
-<p>7 available CSV files<br/>Main task: Analyze content categories that highlights the top5 categories with the largest aggregate popularity.<br/>4 selected CSV files: Content, Profile, Reactions, ReactionType.<br/><img alt="image" src="https://user-images.githubusercontent.com/83184113/147890324-fa748bb3-ec5c-4727-a7b7-0de638b5cd0f.png"/>  </p>
+					<h3>Data cleaning &amp; Data modeling</h3>
 
-<h3>Data cleaning &amp; Data modeling</h3>
+					<p>Used PostgreSQL to assess the data quality and make modified csv file.  </p>
+					<img src="img/1/carbon.png" alt="" width="600"/>
 
-<p>Used PostgreSQL to assess the data quality and make modified csv file.  </p>
-<img src="img/5/carbon.png" alt="" width="600"/>
+					<h4>FEEDBACK of data quality to client:</h4>
 
-<h4>FEEDBACK of data quality to client:</h4>
+					<ol><li>the users who&#39;re under 10 years old occupy 23.3%, which is unresonable.</li><li>3.9% of records miss the value of Type, sentiment, score.  </li></ol>
 
-<ol><li>the users who&#39;re under 10 years old occupy 23.3%, which is unresonable.</li><li>3.9% of records miss the value of Type, sentiment, score.  </li></ol>
+					<p><img alt="image" src="https://user-images.githubusercontent.com/83184113/147889791-b9da2b46-0a40-4d9f-8456-d93d7c5fc5ce.png"/>  </p>
 
-<p><img alt="image" src="https://user-images.githubusercontent.com/83184113/147889791-b9da2b46-0a40-4d9f-8456-d93d7c5fc5ce.png"/>  </p>
+					<p>(After the communication with client, move forward to the next step.) In this condition, I deleted those balnk records and column age.  </p>
 
-<p>(After the communication with client, move forward to the next step.) In this condition, I deleted those balnk records and column age.  </p>
+					<h2>3. Data visualization &amp; storytelling</h2>
 
-<h2>3. Data visualization &amp; storytelling</h2>
+					<p>Used Power BI to create dashboard.<br/><img alt="image" src="https://user-images.githubusercontent.com/83184113/147924308-a475f53f-b731-4c1c-8101-66f44cbb7699.png"/></p>
 
-<p>Used Power BI to create dashboard.<br/><img alt="image" src="https://user-images.githubusercontent.com/83184113/147924308-a475f53f-b731-4c1c-8101-66f44cbb7699.png"/></p>
+					<p>Top 5 categories: <br>
+					<img alt="image" src="https://user-images.githubusercontent.com/83184113/147924595-2e241564-8228-452a-b384-59e7e9010d62.png"/>  </p>
 
-<p>Top 5 categories: <br>
-<img alt="image" src="https://user-images.githubusercontent.com/83184113/147924595-2e241564-8228-452a-b384-59e7e9010d62.png"/>  </p>
+					<h2>4. present to the client</h2>
 
-<h2>4. present to the client</h2>
-
-<p>Created slides to present my results.</p>
-			
-</span>
-<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE0VrCkgkU&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE0VrCkgkU&#x2F;view?utm_content=DAE0VrCkgkU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
-<br><p class="mb-1">&copy; Copyright <b>Yaoxi Yin</b> All Rights Reserved</p>		
-</div>
-		
+					<p>Created slides to present my results.</p>
+								
+					<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+					 padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+					 border-radius: 8px; will-change: transform;">
+					  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+						src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE0VrCkgkU&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+					  </iframe>
+					</div>
+					<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE0VrCkgkU&#x2F;view?utm_content=DAE0VrCkgkU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+					</div>
+						<div class="container medium">
+							<footer>
+							<ul id="copyright">
+							<li>&copy; Yaoxi Yin All rights reserved.</li>
+							</ul>
+							</footer>
+						</div>
+				</div>
+		</article>
 	</body>
 </html>
