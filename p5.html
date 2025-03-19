@@ -3,7 +3,9 @@
 	<head>
 		<title>Project</title>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link href="images/icon.png" rel="icon">
 			<!--content protection-->
 		<SCRIPT LANGUAGE=javascript>
@@ -15,45 +17,63 @@
 			document.onmousedown=click1;
 		</SCRIPT>
 	</head>
-	<body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
+	<body class="is-preload" οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
 	οncοpy='document.selection.empty()' οnselect='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()'>
 	<noscript><iframe src="p1.html"></iframe></noscript>
-			<article id="work" class="wrapper style2">
-				<div class="article-container">
-					<!--content-->
+	
+	<!-- Nav -->
+	<nav id="nav">
+		<ul class="container">
+			<li><a href="index.html#top">Top</a></li>
+			<li><a href="index.html#portfolio">Project</a></li>
+			<li><a href="index.html#contact">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<article id="work" class="wrapper style2">
+		<div class="article-container">
+			<!--content-->
 
-					<h1>Netflix movies and TV Shows Analytics</h1>
-					<div class="justify-text">
-					<p>dataset: netflix.csv
-					8807 records<br/>country: country and special administrative region<br/>listed_in: category  </p>
-					
-					<h2>data quality assessment</h2>
-					
-					<p><img alt="img" src="https://user-images.githubusercontent.com/83184113/148290441-cfcce03e-43c7-40d2-9362-01f29bd2aa94.png"/><br/>The column in grey was abandoned (not helpful in this analysis)<br/>Used PostgreSQL to calculate the total dirty record ratio and got the result which is 10.59%.  (in this step, always need to check the varchar length to avoid error loading)</p>
-					
-					<h2>data cleansing</h2>
-					
-					<p>Used PostgreSQL to opt cleansed record I need, exported result as netflix<em>cleansed.csv<br/>Used Python to create algorithms to count the TV shows and movies in each country, use excel Vlookup function to integrate the result, name it as netflix</em>country.csv<br/>The Top 3 countries with the highest amount of movie/TV show are as below:<br/><img alt="img" src="https://user-images.githubusercontent.com/83184113/165578147-29f32db2-cfc4-4cf1-b7cc-73d82aafe421.png"/><br/>Used PostgreSQL to pick out the records whcih contain these 3 countries and exported result as netflix<em>top.csv<br/>Continued to use Python to filter the records which contain these 3 countries and get netflix</em>top_cat.csv <br/>Made the category ranking in the same solution when solved the country.  </p>
-					
-					<h2>data visualization</h2>
-					
-					<p>Used Tableau to visualized the result:  </p>
-					
-					<div class='tableauPlaceholder' id='viz1651104813208' style='position: relative'><noscript><a href='#'><img alt='Netflix movies and TV Shows analytics ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16510748008080&#47;story&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_16510748008080&#47;story' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16510748008080&#47;story&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-CN' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1651104813208');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1100px';vizElement.style.height='1400px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>	
-					<h2>(my code)</h2>
-					
-					<p><img alt="img" width="800" src="https://user-images.githubusercontent.com/83184113/165568266-2a48a4bb-2563-4935-a1d4-0f65028db0c0.png"/>
-					<img alt="img" width="900" src="https://user-images.githubusercontent.com/83184113/165520477-2afe2db6-4b47-4789-a9ff-2d91d520f256.png"/>
-					<img alt="img" width="900" src="https://user-images.githubusercontent.com/83184113/165540078-21ffaa5a-c9e9-4792-9d7f-535262ea945e.png"/></p>
-					</div>
-						<div class="container medium">
-							<footer>
-							<ul id="copyright">
-							<li>&copy; Yaoxi Yin All rights reserved.</li>
-							</ul>
-							</footer>
-						</div>
+			<h1>Netflix movies and TV Shows Analytics</h1>
+			<div class="justify-text">
+			<p>dataset: netflix.csv
+			8807 records<br/>country: country and special administrative region<br/>listed_in: category  </p>
+			
+			<h2>data quality assessment</h2>
+			
+			<p><img alt="img" src="https://user-images.githubusercontent.com/83184113/148290441-cfcce03e-43c7-40d2-9362-01f29bd2aa94.png"/><br/>The column in grey was abandoned (not helpful in this analysis)<br/>Used PostgreSQL to calculate the total dirty record ratio and got the result which is 10.59%.  (in this step, always need to check the varchar length to avoid error loading)</p>
+			
+			<h2>data cleansing</h2>
+			
+			<p>Used PostgreSQL to opt cleansed record I need, exported result as netflix<em>cleansed.csv<br/>Used Python to create algorithms to count the TV shows and movies in each country, use excel Vlookup function to integrate the result, name it as netflix</em>country.csv<br/>The Top 3 countries with the highest amount of movie/TV show are as below:<br/><img alt="img" src="https://user-images.githubusercontent.com/83184113/165578147-29f32db2-cfc4-4cf1-b7cc-73d82aafe421.png"/><br/>Used PostgreSQL to pick out the records whcih contain these 3 countries and exported result as netflix<em>top.csv<br/>Continued to use Python to filter the records which contain these 3 countries and get netflix</em>top_cat.csv <br/>Made the category ranking in the same solution when solved the country.  </p>
+			
+			<h2>data visualization</h2>
+			
+			<p>Used Tableau to visualized the result:  </p>
+			
+			<div class='tableauPlaceholder' id='viz1651104813208' style='position: relative'><noscript><a href='#'><img alt='Netflix movies and TV Shows analytics ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16510748008080&#47;story&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_16510748008080&#47;story' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16510748008080&#47;story&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-CN' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1651104813208');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1100px';vizElement.style.height='1400px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>	
+			<h2>(my code)</h2>
+			
+			<p><img alt="img" width="800" src="https://user-images.githubusercontent.com/83184113/165568266-2a48a4bb-2563-4935-a1d4-0f65028db0c0.png"/>
+			<img alt="img" width="900" src="https://user-images.githubusercontent.com/83184113/165520477-2afe2db6-4b47-4789-a9ff-2d91d520f256.png"/>
+			<img alt="img" width="900" src="https://user-images.githubusercontent.com/83184113/165540078-21ffaa5a-c9e9-4792-9d7f-535262ea945e.png"/></p>
+			</div>
+				<div class="container medium">
+					<footer>
+					<ul id="copyright">
+					<li>&copy; Yaoxi Yin All rights reserved.</li>
+					</ul>
+					</footer>
 				</div>
-			</article>
+		</div>
+	</article>
+	
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 	</body>
 </html>
