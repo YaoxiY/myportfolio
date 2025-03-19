@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="images/icon.png" rel="icon">
+		<!--content protection-->
+		<SCRIPT LANGUAGE=javascript>
+			function click(){alert('Copying is not allowed')}
+			function click1(){if(event.button==2){alert('Copying is not allowed')}}
+			function CtrlKeyDown(){if (event.ctrlKey){alert('Copying is not allowed')}}
+			document.onkeydown=CtrlKeyDown;
+			document.onselectstart=click;
+			document.onmousedown=click1;
+		</SCRIPT>
+	</head>
+	<body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
+	οncοpy='document.selection.empty()' οnselect='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()'>
+	<noscript><iframe src="p7.html"></iframe></noscript>
+		<article id="work" class="wrapper style2">
+			<div class="article-container">
+				<!--content-->
+				<h1>Biochemical cycles simulation</h1>
+				<div class="justify-text">
+				<p>Tools: Stella Architect, MS Office, etc.</p>
+				<img src="img/7/1.jpg" alt="" width="800"/>
+				<img src="img/7/2.jpg" alt="" width="800"/>
+				<img src="img/7/3.jpg" alt="" width="800"/>
+				</div>
+					<div class="container medium">
+						<footer>
+							<ul id="copyright">
+							<li>&copy; Yaoxi Yin All rights reserved.</li>
+							</ul>
+						</footer>
+					</div>
+			</div>
+		</article>
+	</body>
+</html>

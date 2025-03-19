@@ -1,0 +1,151 @@
+:root {
+  --color-lead-white: #f0f0f4;
+  --color-flower-blue: #003472;
+  --color-willow-yellow: #c9dd22;
+  --color-snow-blue: #b0a4e3;
+  --color-royal-blue: #003399;
+}
+
+body {
+  background-color: var(--color-lead-white);
+}
+
+/* Remove section dividers and set unified background */
+.wrapper {
+  background-color: var(--color-lead-white) !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative;
+}
+
+.wrapper.style2,
+.wrapper.style3,
+.wrapper.style4 {
+  background-color: var(--color-lead-white) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Navigation styles */
+#nav {
+  background: linear-gradient(180deg, rgba(176, 164, 227, 0.7) 0%, rgba(176, 164, 227, 0) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0 2em;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  height: 3.5em;
+}
+
+#nav ul.container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2em;
+  padding-left: 1em;
+  align-items: center;
+  height: 100%;
+}
+
+#nav ul li a {
+  color: var(--color-flower-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  background: none !important;
+  font-weight: 600;
+  text-shadow: none !important;
+}
+
+#nav ul li a:hover {
+  color: var(--color-willow-yellow) !important;
+  background: none !important;
+}
+
+/* Headings */
+h1:not(.text-content), 
+h2:not(.text-content), 
+h3:not(.text-content) {
+  color: var(--color-flower-blue) !important;
+  text-shadow: none !important;
+}
+
+/* Only change color on hover for headings with links */
+h1:not(.text-content) a:hover, 
+h2:not(.text-content) a:hover, 
+h3:not(.text-content) a:hover {
+  color: var(--color-willow-yellow) !important;
+  transition: color 0.3s ease;
+}
+
+/* Portfolio cards */
+.box.style2 {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section */
+#contact {
+  background-color: var(--color-lead-white) !important;
+}
+
+#contact h3 {
+  text-transform: lowercase;
+  text-shadow: none !important;
+}
+
+.social {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.social li a {
+  background: white !important;
+  border: 2px solid var(--color-flower-blue);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-royal-blue) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.social li a i {
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+.social li a:hover {
+  transform: translateY(-2px);
+}
+
+.social li a.fa-envelope::after {
+  display: none;
+}
+
+/* Copyright section */
+#copyright {
+  color: var(--color-royal-blue) !important;
+  text-shadow: none !important;
+}
+
+#copyright li {
+  text-shadow: none !important;
+}
+
+/* Remove any remaining dividers */
+hr, 
+.divider {
+  display: none !important;
+}
+
+/* Remove any textured backgrounds */
+[class*="style"] {
+  background-image: none !important;
+} 
