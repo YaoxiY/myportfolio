@@ -1,13 +1,55 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
 :root {
   --color-lead-white: #f0f0f4;
   --color-flower-blue: #003472;
   --color-willow-yellow: #c9dd22;
   --color-snow-blue: #b0a4e3;
   --color-royal-blue: #003399;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* Apply modern font stack to all text elements */
 body {
   background-color: var(--color-lead-white);
+  font-family: var(--font-primary);
+  font-weight: 300;  /* Inter Light */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, span {
+  font-family: var(--font-primary);
+}
+
+/* 标题使用 Montserrat 字体 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* 导航和卡片标题也使用 Montserrat */
+#nav ul li a,
+.tech-card h4,
+.box.style2 h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* 正文和标签使用 Light 字重 */
+p, .tech-tag, li, span {
+  font-weight: 300;
+  letter-spacing: -0.003em;
 }
 
 /* Remove section dividers and set unified background */
@@ -106,7 +148,7 @@ h3:not(.text-content) a:hover {
 
 .social li a {
   background: white !important;
-  border: 2px solid var(--color-flower-blue);
+  border: 2px solid var(--color-royal-blue);
   border-radius: 8px;
   transition: all 0.3s ease;
   width: 3em;
@@ -121,13 +163,15 @@ h3:not(.text-content) a:hover {
 }
 
 .social li a:hover {
-  border-color: var(--color-flower-blue);
+  border-color: var(--color-willow-yellow);
+  color: var(--color-willow-yellow) !important;
 }
 
 .social li a i {
   filter: none !important;
   text-shadow: none !important;
-  color: var(--color-royal-blue);
+  color: inherit;
+  transition: color 0.3s ease;
 }
 
 .social li a.fa-envelope::after {
@@ -201,6 +245,11 @@ hr,
   margin-bottom: 1rem;
   font-weight: 600;
   text-align: left;
+  transition: color 0.3s ease;  /* 添加颜色过渡动画 */
+}
+
+.tech-card:hover h4 {
+  color: var(--color-willow-yellow);  /* 鼠标悬停时变成柳黄色 */
 }
 
 .tech-tags {
