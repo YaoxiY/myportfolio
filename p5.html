@@ -3,11 +3,9 @@
 	<head>
 		<title>Project</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link href="images/icon.png" rel="icon">
-		<!--content protection-->
+			<!--content protection-->
 		<SCRIPT LANGUAGE=javascript>
 			function click(){alert('Copying is not allowed')}
 			function click1(){if(event.button==2){alert('Copying is not allowed')}}
@@ -19,68 +17,34 @@
 	</head>
 	<body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
 	οncοpy='document.selection.empty()' οnselect='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()'>
-		<noscript><iframe src="p5.html"></iframe></noscript>
-
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="container">
-				<li><a href="index.html#top">Top</a></li>
-				<li><a href="index.html#portfolio">Project</a></li>
-				<li><a href="index.html#contact">Contact</a></li>
-			</ul>
-		</nav>
-
-		<article id="work" class="wrapper style2">
+	<noscript><iframe src="p1.html"></iframe></noscript>
+			<article id="work" class="wrapper style2">
 				<div class="article-container">
 					<!--content-->
-					<h1>Accenture Data Analytics Virtual Experience</h1>
+
+					<h1>Netflix movies and TV Shows Analytics</h1>
 					<div class="justify-text">
-					<p><a href="https://insidesherpa.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture_qAf6h7Yxgr98kdGG7_1641691434375_completion_certificate.pdf">Certificate of completion</a></p>
-
-					<h2>1. Project understanding</h2>
-
-					<p>Client: Social Buzz<br/>Client industry Social media &amp; contet creation<br/>- Which statement best describes the business problem that Accenture is tasked to address for this project?<br/>The client has reached a massive scale within recent years and does not have the resources internally to handle it.</p>
-
-					<ul><li><p>Which statement lists the three requirements that Accenture is tasked to fulfill for this project?<br/>Audit of big data practice, recommendations for IPO, analysis of popular content.</p></li><li><p>Which task out of these options is the most relevant to you as a data analyst, and therefore which one will you work on?<br/>Analysis of sample data sets with visualizations.</p></li></ul>
-
-					<h2>2. Data cleaning &amp; modeling</h2>
-
-					<h3>Requirements gathering</h3>
-
-					<p>7 available CSV files<br/>Main task: Analyze content categories that highlights the top5 categories with the largest aggregate popularity.<br/>4 selected CSV files: Content, Profile, Reactions, ReactionType.<br/><img alt="image" src="https://user-images.githubusercontent.com/83184113/147890324-fa748bb3-ec5c-4727-a7b7-0de638b5cd0f.png"/>  </p>
-
-					<h3>Data cleaning &amp; Data modeling</h3>
-
-					<p>Used PostgreSQL to assess the data quality and make modified csv file.  </p>
-					<img src="img/1/carbon.png" alt="" width="600"/>
-
-					<h4>FEEDBACK of data quality to client:</h4>
-
-					<ol><li>the users who&#39;re under 10 years old occupy 23.3%, which is unresonable.</li><li>3.9% of records miss the value of Type, sentiment, score.  </li></ol>
-
-					<p><img alt="image" src="https://user-images.githubusercontent.com/83184113/147889791-b9da2b46-0a40-4d9f-8456-d93d7c5fc5ce.png"/>  </p>
-
-					<p>(After the communication with client, move forward to the next step.) In this condition, I deleted those balnk records and column age.  </p>
-
-					<h2>3. Data visualization &amp; storytelling</h2>
-
-					<p>Used Power BI to create dashboard.<br/><img alt="image" src="https://user-images.githubusercontent.com/83184113/147924308-a475f53f-b731-4c1c-8101-66f44cbb7699.png"/></p>
-
-					<p>Top 5 categories: <br>
-					<img alt="image" src="https://user-images.githubusercontent.com/83184113/147924595-2e241564-8228-452a-b384-59e7e9010d62.png"/>  </p>
-
-					<h2>4. present to the client</h2>
-
-					<p>Created slides to present my results.</p>
-								
-					<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
-					 padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-					 border-radius: 8px; will-change: transform;">
-					  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-						src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE0VrCkgkU&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-					  </iframe>
-					</div>
-					<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE0VrCkgkU&#x2F;view?utm_content=DAE0VrCkgkU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a>
+					<p>dataset: netflix.csv
+					8807 records<br/>country: country and special administrative region<br/>listed_in: category  </p>
+					
+					<h2>data quality assessment</h2>
+					
+					<p><img alt="img" src="https://user-images.githubusercontent.com/83184113/148290441-cfcce03e-43c7-40d2-9362-01f29bd2aa94.png"/><br/>The column in grey was abandoned (not helpful in this analysis)<br/>Used PostgreSQL to calculate the total dirty record ratio and got the result which is 10.59%.  (in this step, always need to check the varchar length to avoid error loading)</p>
+					
+					<h2>data cleansing</h2>
+					
+					<p>Used PostgreSQL to opt cleansed record I need, exported result as netflix<em>cleansed.csv<br/>Used Python to create algorithms to count the TV shows and movies in each country, use excel Vlookup function to integrate the result, name it as netflix</em>country.csv<br/>The Top 3 countries with the highest amount of movie/TV show are as below:<br/><img alt="img" src="https://user-images.githubusercontent.com/83184113/165578147-29f32db2-cfc4-4cf1-b7cc-73d82aafe421.png"/><br/>Used PostgreSQL to pick out the records whcih contain these 3 countries and exported result as netflix<em>top.csv<br/>Continued to use Python to filter the records which contain these 3 countries and get netflix</em>top_cat.csv <br/>Made the category ranking in the same solution when solved the country.  </p>
+					
+					<h2>data visualization</h2>
+					
+					<p>Used Tableau to visualized the result:  </p>
+					
+					<div class='tableauPlaceholder' id='viz1651104813208' style='position: relative'><noscript><a href='#'><img alt='Netflix movies and TV Shows analytics ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16510748008080&#47;story&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_16510748008080&#47;story' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_16510748008080&#47;story&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='zh-CN' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1651104813208');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1100px';vizElement.style.height='1400px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>	
+					<h2>(my code)</h2>
+					
+					<p><img alt="img" width="800" src="https://user-images.githubusercontent.com/83184113/165568266-2a48a4bb-2563-4935-a1d4-0f65028db0c0.png"/>
+					<img alt="img" width="900" src="https://user-images.githubusercontent.com/83184113/165520477-2afe2db6-4b47-4789-a9ff-2d91d520f256.png"/>
+					<img alt="img" width="900" src="https://user-images.githubusercontent.com/83184113/165540078-21ffaa5a-c9e9-4792-9d7f-535262ea945e.png"/></p>
 					</div>
 						<div class="container medium">
 							<footer>
@@ -90,6 +54,6 @@
 							</footer>
 						</div>
 				</div>
-		</article>
+			</article>
 	</body>
 </html>
