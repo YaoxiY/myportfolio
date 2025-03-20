@@ -3,9 +3,7 @@
 	<head>
 		<title>Project</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css" />
 		<link href="images/icon.png" rel="icon">
 		<!--content protection-->
 		<SCRIPT LANGUAGE=javascript>
@@ -17,84 +15,66 @@
 		document.onmousedown=click1;
 		</SCRIPT>
 	</head>
-	<body class="is-preload" οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
+	<body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false'
 	οncοpy='document.selection.empty()' οnselect='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()'>
 	<noscript><iframe src="p6.html"></iframe></noscript>
-
-	<!-- Nav -->
-	<nav id="nav">
-		<ul class="container">
-			<li><a href="index.html#top">Top</a></li>
-			<li><a href="index.html#portfolio">Project</a></li>
-			<li><a href="index.html#contact">Contact</a></li>
-		</ul>
-	</nav>
-
-	<article id="work" class="wrapper style2">
-		<div class="article-container">
-			<!--content-->
-			<h2>Call Center Analytics</h2>
-			<div class="justify-text">
-			<h3>background</h3>
-			<p>It's omnipresent: telecom marketing. Better price here. Better service there. Best for small businesses here. Best for young urbanites there. But what do customers really want? Our client, a big telecom company needs to know.</p>
-			<h3>set KPIs</h3>
-			<p>Overall customer satisfaction
-			Overall calls answered/abandoned
-			Calls by time
-			Average speed of answer
-			Agent's performance quadrant -> average handle time (talk duration) vs calls answered</p>
-			<h3>data cleansing</h3>
-			<p>data preview in Power Query of Power BI<br>
-			<img src="https://github.com/YaoxiY/forage-pwc/assets/83184113/1c4416e9-18a8-49b8-8c37-dcf5280074aa" width="500" alt="Image"></p>
-			<h3>build dashboard</h3>
-			<p>build new measures for the table visual<br>
-			<img src="https://github.com/YaoxiY/forage-pwc/assets/83184113/9787346b-bc4b-4866-92d3-b97d5a94448a" width="500" alt="image"><br>
-			simplify the visuals and change colors for comfortable data-reading<br>
-			<img src="https://github.com/YaoxiY/forage-pwc/assets/83184113/dafbaa3d-9fe7-4e8b-9e67-3e5a79f64703" width="500" alt="image"></p>
-			<h3>findings</h3>
-			<h4>Calls by Month</h4>
-			<p>In Janaury, it has the most amount of calls.</p>
-			<h3>Topic</h3>
-			<p>The call about admin support has the highest resolved ratio, which is 74.08%. The customer satisfaction and average speed of answers for each topics have very slight difference.</p>
-			<h4>Total Number of Answered Calls (# of answered)</h4>
-			<p>Jim answered the highest number of calls, with a total of 536.<br>
-			Dan is a close second with 523 calls answered.<br>
-			Stewart answered the fewest calls, with a total of 477.</p>
-			<h4>Total Number of Resolved Calls (# of resolved)</h4>
-			<p>Jim also leads in the number of resolved calls, with a total of 485.<br>
-			Dan resolved 471 calls, ranking second.<br>
-			Stewart resolved the fewest calls, with 424.</p>
-			<h4>Average Speed of Answer in Seconds</h4>
-			<p>Joe has the longest average speed of answer, at 70.99 seconds.<br>
-			Becky has the shortest average speed of answer, at 65.33 seconds.</p>
-			<h4>Average Customer Satisfaction Rating</h4>
-			<p>Martha has the highest average customer satisfaction rating, at 3.47.<br>
-			Dan has the second-highest customer satisfaction rating, at 3.45.<br>
-			Joe has the lowest customer satisfaction rating, at 3.33.</p>
-			<h4>Call Resolution Rate</h4>
-			<p>5/8 of agents have a resolution rate close to or slightly above 90%.</p>
-			<h4>Correlation Between Response Time and Satisfaction</h4>
-			<p>Generally, a shorter response time may correlate with higher customer satisfaction. However, Becky, despite having the fastest response time, does not have the highest satisfaction rating, indicating that other factors also affect customer satisfaction.</p>
-			<h4>Overall Agent Performance</h4>
-			<p>Dan stands out in terms of both the number of calls answered and resolved, and has a high customer satisfaction rating, possibly making him the top-performing agent.<br>
-			Stewart has the fewest calls answered and resolved, and further analysis may be needed to understand the reasons.</p>
-			</div>
-			<div class="container medium">
-				<footer>
-				<ul id="copyright">
-				<li>&copy; Yaoxi Yin All rights reserved.</li>
-				</ul>
-				</footer>
-			</div>
-		</div>
-	</article>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+			<article id="work" class="wrapper style2">
+				<div class="article-container">
+					<!--content-->
+					<h1>Call center analytics</h1>
+					<div class="justify-text">
+					<h2>background</h2>
+					<p>It’s omnipresent: telecom marketing. Better price here. Better service there. Best for small businesses here. Best for young urbanites there. But what do customers really want? Our client, a big telecom company needs to know.</p>
+					<h2>set KPIs</h2>
+					<p>Overall customer satisfaction
+					Overall calls answered/abandoned
+					Calls by time
+					Average speed of answer
+					Agent’s performance quadrant -> average handle time (talk duration) vs calls answered</p>
+					<h2>data cleansing</h2>
+					<p>data preview in Power Query of Power BI<br>
+					<img src="https://github.com/YaoxiY/forage-pwc/assets/83184113/1c4416e9-18a8-49b8-8c37-dcf5280074aa" width="500" alt="Image"></p>
+					<h2>build dashboard</h2>
+					<p>build new measures for the table visual<br>
+					<img src="https://github.com/YaoxiY/forage-pwc/assets/83184113/9787346b-bc4b-4866-92d3-b97d5a94448a" width="500" alt="image"><br>
+					simplify the visuals and change colors for comfortable data-reading<br>
+					<img src="https://github.com/YaoxiY/forage-pwc/assets/83184113/dafbaa3d-9fe7-4e8b-9e67-3e5a79f64703" width="500" alt="image"></p>
+					<h2>findings</h2>
+					<h3>Calls by Month</h3>
+					<p>In Janaury, it has the most amount of calls.</p>
+					<h2>Topic</h2>
+					<p>The call about admin support has the highest resolved ratio, which is 74.08%. The customer satisfaction and average speed of answers for each topics have very slight difference.</p>
+					<h3>Total Number of Answered Calls (# of answered)</h3>
+					<p>Jim answered the highest number of calls, with a total of 536.<br>
+					Dan is a close second with 523 calls answered.<br>
+					Stewart answered the fewest calls, with a total of 477.</p>
+					<h3>Total Number of Resolved Calls (# of resolved)</h3>
+					<p>Jim also leads in the number of resolved calls, with a total of 485.<br>
+					Dan resolved 471 calls, ranking second.<br>
+					Stewart resolved the fewest calls, with 424.</p>
+					<h3>Average Speed of Answer in Seconds</h3>
+					<p>Joe has the longest average speed of answer, at 70.99 seconds.<br>
+					Becky has the shortest average speed of answer, at 65.33 seconds.</p>
+					<h3>Average Customer Satisfaction Rating</h3>
+					<p>Martha has the highest average customer satisfaction rating, at 3.47.<br>
+					Dan has the second-highest customer satisfaction rating, at 3.45.<br>
+					Joe has the lowest customer satisfaction rating, at 3.33.</p>
+					<h3>Call Resolution Rate</h3>
+					<p>5/8 of agents have a resolution rate close to or slightly above 90%.</p>
+					<h3>Correlation Between Response Time and Satisfaction</h3>
+					<p>Generally, a shorter response time may correlate with higher customer satisfaction. However, Becky, despite having the fastest response time, does not have the highest satisfaction rating, indicating that other factors also affect customer satisfaction.</p>
+					<h3>Overall Agent Performance</h3>
+					<p>Dan stands out in terms of both the number of calls answered and resolved, and has a high customer satisfaction rating, possibly making him the top-performing agent.<br>
+					Stewart has the fewest calls answered and resolved, and further analysis may be needed to understand the reasons.</p>
+					</div>
+						<div class="container medium">
+							<footer>
+							<ul id="copyright">
+							<li>&copy; Yaoxi Yin All rights reserved.</li>
+							</ul>
+							</footer>
+						</div>
+					</div>
+			</article>
 	</body>
 </html>
