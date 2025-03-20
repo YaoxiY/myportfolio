@@ -234,12 +234,17 @@ h3:not(.text-content) a:hover {
   font-family: var(--font-heading) !important;  /* 使用 Montserrat 字体 */
   font-weight: 600 !important;
   letter-spacing: -0.02em !important;
+  font-size: 1.35em !important;  /* 调整为h4大小 */
 }
 
 .box.style2 p {
   font-family: var(--font-primary) !important;  /* 使用 Inter 字体 */
   font-weight: 300 !important;
   letter-spacing: -0.003em !important;
+  font-size: 0.95em !important;  /* 调整描述文字大小 */
+  line-height: 1.6 !important;
+  color: #666 !important;
+  margin-top: 0.5em !important;  /* 增加与标题的间距 */
 }
 
 /* Contact section */
