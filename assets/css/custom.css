@@ -231,6 +231,15 @@ h3:not(.text-content) a:hover {
 
 .box.style2 h3 {
   color: var(--color-royal-blue) !important;  /* 项目卡片标题使用宝蓝色 */
+  font-family: var(--font-heading) !important;  /* 使用 Montserrat 字体 */
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.box.style2 p {
+  font-family: var(--font-primary) !important;  /* 使用 Inter 字体 */
+  font-weight: 300 !important;
+  letter-spacing: -0.003em !important;
 }
 
 /* Contact section */
@@ -422,4 +431,23 @@ article {
   padding: 4em 0 2em 0 !important;
   border: none !important;
   box-shadow: none !important;
-} 
+}
+
+/* 添加渐入动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#work header h2 {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* 确保其他样式保持不变 */ 
