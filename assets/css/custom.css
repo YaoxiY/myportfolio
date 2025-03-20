@@ -10,8 +10,8 @@
   --color-willow-yellow-light: #dff048;  /* 30% lighter version of willow yellow */
   --color-snow-blue: #b0a4e3;
   --color-royal-blue: #003399;
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --content-width: 1200px;  /* Added for consistent content width */
 }
 
@@ -229,22 +229,30 @@ h3:not(.text-content) a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
-.box.style2 h3 {
-  color: var(--color-royal-blue) !important;  /* 项目卡片标题使用宝蓝色 */
-  font-family: var(--font-heading) !important;  /* 使用 Montserrat 字体 */
-  font-weight: 600 !important;
-  letter-spacing: -0.02em !important;
-  font-size: 1.35em !important;  /* 调整为h4大小 */
+#portfolio .box.style2 h4,
+#portfolio .box.style2 h4 a {
+  font-family: 'Montserrat', sans-serif !important;
+  color: var(--color-royal-blue);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: left;
+  transition: color 0.3s ease;
 }
 
-.box.style2 p {
-  font-family: var(--font-primary) !important;  /* 使用 Inter 字体 */
+#portfolio .box.style2:hover h4,
+#portfolio .box.style2:hover h4 a {
+  color: var(--color-willow-yellow);
+}
+
+#portfolio .box.style2 p {
+  font-family: 'Inter', sans-serif !important;
   font-weight: 300 !important;
   letter-spacing: -0.003em !important;
-  font-size: 0.95em !important;  /* 调整描述文字大小 */
+  font-size: 0.95em !important;
   line-height: 1.6 !important;
   color: #666 !important;
-  margin-top: 0.5em !important;  /* 增加与标题的间距 */
+  margin-top: 0.5em !important;
 }
 
 /* Contact section */
@@ -455,4 +463,13 @@ article {
     opacity: 0;
 }
 
-/* 确保其他样式保持不变 */ 
+/* 确保其他样式保持不变 */
+
+/* Project card title and description fonts */
+#portfolio .box.style2 h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#portfolio .box.style2 p {
+    font-family: 'Inter', sans-serif;
+} 
