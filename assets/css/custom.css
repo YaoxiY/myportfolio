@@ -7,22 +7,173 @@
   --color-lead-white: #f0f0f4;
   --color-flower-blue: #003472;
   --color-willow-yellow: #c9dd22;
+  --color-willow-yellow-light: #dff048;  /* 30% lighter version of willow yellow */
   --color-snow-blue: #b0a4e3;
   --color-royal-blue: #003399;
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --content-width: 1200px;  /* Added for consistent content width */
 }
 
-/* Apply modern font stack to all text elements */
+/* Reset background styles */
+html {
+  background: transparent;
+}
+
 body {
-  background-color: var(--color-lead-white);
+  background: transparent !important;
   font-family: var(--font-primary);
-  font-weight: 300;  /* Inter Light */
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  position: relative;
+  min-height: 100vh;
 }
 
+/* Fixed background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Make ALL content containers transparent */
+.wrapper,
+.wrapper.style1,
+.wrapper.style2,
+.wrapper.style3,
+.wrapper.style4,
+#main,
+#work,
+article {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Navigation styles */
+#nav {
+  background: linear-gradient(180deg, rgba(176, 164, 227, 0.7) 0%, rgba(176, 164, 227, 0) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0;
+  border: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5em;
+  z-index: 1000;
+}
+
+#nav .container {
+  width: 100%;
+  max-width: var(--content-width, 1200px);
+  padding: 0 2em;
+  margin: 0 auto;
+}
+
+#nav ul.container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5em;
+  padding-left: 7em;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  max-width: var(--content-width, 1200px);
+}
+
+#nav ul li a {
+  color: white !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  background: none !important;
+  font-weight: 600;
+  text-shadow: none !important;
+}
+
+#nav ul li a:hover {
+  color: var(--color-willow-yellow-light) !important;
+  background: none !important;
+  text-shadow: none !important;
+}
+
+/* Remove the active state color change */
+#nav ul li a:active,
+#nav ul li a:focus,
+#nav ul li a.active {
+  color: white !important;
+  background: none !important;
+  text-shadow: none !important;
+}
+
+/* Responsive navigation */
+@media screen and (max-width: 980px) {
+  #nav ul.container {
+    padding-left: 5em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #nav ul.container {
+    padding-left: 4em;
+    gap: 1em;
+  }
+}
+
+/* Add glass effect to cards */
+.box.style2,
+.tech-card {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Contact section - make it transparent too */
+#contact {
+  background: transparent !important;
+}
+
+/* Responsive background handling */
+@media screen and (max-width: 980px) {
+  body::before {
+    background-position: center center;
+  }
+  #nav ul.container {
+    padding-left: 2em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  body::before {
+    background-position: center center;
+  }
+  #nav ul.container {
+    padding-left: 1em;
+    gap: 1em;
+  }
+}
+
+@media (orientation: portrait) {
+  body::before {
+    background-position: center center;
+  }
+}
+
+/* Font styles */
 h1, h2, h3, h4, h5, h6, p, a, li, span {
   font-family: var(--font-primary);
 }
@@ -52,57 +203,6 @@ p, .tech-tag, li, span {
   letter-spacing: -0.003em;
 }
 
-/* Remove section dividers and set unified background */
-.wrapper {
-  background-color: var(--color-lead-white) !important;
-  border: none !important;
-  box-shadow: none !important;
-  position: relative;
-}
-
-.wrapper.style2,
-.wrapper.style3,
-.wrapper.style4 {
-  background-color: var(--color-lead-white) !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Navigation styles */
-#nav {
-  background: linear-gradient(180deg, rgba(176, 164, 227, 0.7) 0%, rgba(176, 164, 227, 0) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 0 1em;
-  border: none !important;
-  display: flex;
-  align-items: center;
-  height: 3.5em;
-}
-
-#nav ul.container {
-  display: flex;
-  justify-content: flex-start;
-  gap: 1.5em;
-  padding-left: 0.5em;
-  align-items: center;
-  height: 100%;
-}
-
-#nav ul li a {
-  color: var(--color-flower-blue);
-  text-decoration: none;
-  transition: color 0.3s ease;
-  background: none !important;
-  font-weight: 600;
-  text-shadow: none !important;
-}
-
-#nav ul li a:hover {
-  color: var(--color-willow-yellow) !important;
-  background: none !important;
-}
-
 /* Headings */
 h1:not(.text-content), 
 h2:not(.text-content), 
@@ -121,9 +221,12 @@ h3:not(.text-content) a:hover {
 
 /* Portfolio cards */
 .box.style2 {
-  background: white;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
 }
 
 .box.style2 h3 {
@@ -131,10 +234,6 @@ h3:not(.text-content) a:hover {
 }
 
 /* Contact section */
-#contact {
-  background-color: var(--color-lead-white) !important;
-}
-
 #contact h3 {
   text-transform: lowercase;
   text-shadow: none !important;
@@ -190,8 +289,19 @@ h3:not(.text-content) a:hover {
 
 /* Remove any remaining dividers */
 hr, 
-.divider {
+.divider,
+.wrapper::before,
+.wrapper::after {
   display: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+/* Remove any borders or shadows from sections */
+section,
+article {
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Remove any textured backgrounds */
@@ -287,4 +397,29 @@ hr,
 /* About Me styles */
 #work .col-12 p {
   text-align: left;
+}
+
+/* Remove section dividers and borders */
+.wrapper {
+  padding: 4em 0 2em 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.wrapper.style2 {
+  padding: 4em 0 2em 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.wrapper.style3 {
+  padding: 4em 0 2em 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.wrapper.style4 {
+  padding: 4em 0 2em 0 !important;
+  border: none !important;
+  box-shadow: none !important;
 } 
