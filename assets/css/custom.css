@@ -232,7 +232,7 @@ h3:not(.text-content) a:hover {
 #portfolio .box.style2 h4,
 #portfolio .box.style2 h4 a {
   font-family: 'Montserrat', sans-serif !important;
-  color: var(--color-royal-blue);
+  color: var(--color-royal-blue) !important;
   font-size: 1.1rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -242,7 +242,7 @@ h3:not(.text-content) a:hover {
 
 #portfolio .box.style2:hover h4,
 #portfolio .box.style2:hover h4 a {
-  color: var(--color-willow-yellow);
+  color: var(--color-willow-yellow) !important;
 }
 
 #portfolio .box.style2 p {
